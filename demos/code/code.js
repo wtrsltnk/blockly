@@ -10,6 +10,8 @@
  */
 'use strict';
 
+goog.require('Blockly.custom_renderer.Renderer');
+
 /**
  * Create a namespace for the application.
  */
@@ -443,6 +445,7 @@ Code.init = function () {
       },
       media: '../../media/',
       rtl: rtl,
+      renderer: 'custom_renderer',
       toolbox: toolboxXml,
       zoom:
       {

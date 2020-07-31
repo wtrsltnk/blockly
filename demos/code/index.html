@@ -6,8 +6,7 @@
   <meta name="google" value="notranslate">
   <title>Blockly Demo:</title>
   <link rel="stylesheet" href="style.css">
-  <script src="/storage.js"></script>
-  <script src="../../blockly_compressed.js"></script>
+  <script src="../../blockly_uncompressed.js"></script>
   <script src="../../blocks_compressed.js"></script>
   <script src="../../arduino_compressed.js"></script>
   <script src="code.js"></script>
@@ -58,11 +57,49 @@
       </td>
     </tr>
   </table>
+ 
   <div id="content_blocks" class="content"></div>
   <pre id="content_arduino" class="content prettyprint lang-arduino"></pre>
-  <textarea id="content_xml" class="content" wrap="off"></textarea>
+
+ <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+    <category id="l_original" name="%{BKY_LEAPHY_ORIGINAL_CATEGORY}" categorystyle="leaphy_category">
+      <block type="leaphy_original_set_led">
+        <value name="LED_RED">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="LED_GREEN">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="LED_BLUE">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="leaphy_original_set_motor">
+        <value name="MOTOR_SPEED">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="leaphy_original_get_distance"></block>
+      <block type="leaphy_original_move_motors">
+        <value name="MOTOR_SPEED">
+          <shadow type="math_number">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="leaphy_original_digital_read"></block>
+      <block type="leaphy_original_analog_read"></block>
+    </category>
     <category name="%{BKY_LEAPHY_SITUATION_CATEGORY}" categorystyle="situation_category">
       <block type="controls_repeat_ext">
         <value name="TIMES">
@@ -134,42 +171,6 @@
     </category>  
     <category name="%{BKY_LEAPHY_VARIABLES_CATEGORY}" categorystyle="variables_category" custom="VARIABLE"></category>
     <category name="%{BKY_LEAPHY_FUNCTIONS_CATEGORY}" categorystyle="functions_category" custom="PROCEDURE"></category>
-    <category id="l_original" name="%{BKY_LEAPHY_ORIGINAL_CATEGORY}" categorystyle="leaphy_category">
-      <block type="leaphy_original_set_led">
-        <value name="LED_RED">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <value name="LED_GREEN">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <value name="LED_BLUE">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-      </block>
-      <block type="leaphy_original_set_motor">
-        <value name="MOTOR_SPEED">
-          <shadow type="math_number">
-            <field name="NUM">100</field>
-          </shadow>
-        </value>
-      </block>
-      <block type="leaphy_original_get_distance"></block>
-      <block type="leaphy_original_move_motors">
-        <value name="MOTOR_SPEED">
-          <shadow type="math_number">
-            <field name="NUM">100</field>
-          </shadow>
-        </value>
-      </block>
-      <block type="leaphy_original_digital_read"></block>
-      <block type="leaphy_original_analog_read"></block>
-    </category>
     </xml>
 </body>
 </html>
